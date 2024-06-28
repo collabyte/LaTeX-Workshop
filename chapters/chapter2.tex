@@ -1,0 +1,123 @@
+\chapter{Table, Image, Caption, Label}
+\section{Inserting table}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Column 1 & Column 2 & Column 3\\
+        \hline
+        Value 1 & Value 2 & Value 3 \\
+        \hline
+        Value 4 & Value 5 & Value 6 \\
+        \hline
+    \end{tabular}
+    \caption{A sample table}
+    \label{tab:sample1}
+\end{table}
+
+\begin{table}[h!]
+        \centering
+        \begin{tabular}{|c|p{10cm}|}
+            \hline
+            \textbf{Parameter} & \textbf{Position} \\
+            \hline
+            h & Place the float here, i.e., approximately at the same point it occurs in the source text (however, not exactly at the spot)\\
+            \hline
+            t & Position at the top of the page.\\
+            \hline
+            b & Position at the bottom of the page.\\
+            \hline
+            p & Put on a special page for floats only.\\
+            \hline
+            ! & Override internal parameters LaTeX uses for determining "good" float positions.\\
+            \hline
+            H & Places the float at precisely the location in the LaTeX code. Requires the float package, though may cause problems occasionally. This is somewhat equivalent to h!. \\
+            \hline
+        \end{tabular}
+        \caption{Different positioning values}
+        \label{tab:Positioning}
+\end{table}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|p{10cm}|}
+        \hline
+        \textbf{Abbreviation} & \textbf{Value} \\
+        \hline
+        pt & a point is approximately 1/72.27 inch, that means about 0.0138 inch or 0.3515 mm (exactly point is defined as 1/864 of American printer’s foot that is 249/250 of English foot) \\
+        \hline
+        mm & a millimeter \\
+        \hline
+        cm & a centimeter \\
+        \hline
+        in & inch \\
+        \hline
+        ex & roughly the height of an 'x' (lowercase) in the current font (it depends on the font used) \\
+        \hline
+        em & roughly the width of an 'M' (uppercase) in the current font (it depends on the font used) \\
+        \hline
+        mu & math unit equal to 1/18 em, where em is taken from the math symbols family \\
+        \hline
+        sp & so-called "special points", a low-level unit of measure where 65536sp=1pt \\
+        \hline
+    \end{tabular}
+    \caption{\LaTeX{} Units}
+    \label{tab:Units}
+\end{table}
+
+\newpage
+\section{Inserting Image}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.5\textwidth]{logo.jpg}
+  \caption{Sample image}
+  \label{fig:sample}
+\end{figure}
+
+\section{Labels}
+Referencing Figure \ref{fig:sample}.
+
+Referencing Table \ref{tab:sample1}.
+
+Referencing Positioning Values \ref{tab:Positioning}.
+
+\newpage
+\section{Writing Mathematical Functions}
+
+\[
+f(x) = ax^2 + bx + c
+\]
+
+Where \(a\), \(b\), and \(c\) are constants.\\\\
+
+Inline: \( E = mc^2 \) or $ E = mc^2 $ or \begin{math} E = mc^2 \end{math}\\
+
+Display Math Mode (Unnumbered):
+\begin{displaymath}
+    E = mc^2
+\end{displaymath}
+
+or
+
+\[E = mc^2\]
+
+Display Math Mode (Equation Number):
+\begin{equation}
+    \label{eq:relativity}
+    E = mc^2
+\end{equation}
+
+
+
+\begin{equation} 
+    \label{eq:gravitation}
+    F = G \frac{m_1 m_2}{r^2}
+\end{equation}
+where:
+\begin{itemize}
+    \item \( F \) is the force between two masses \( m_1 \) and \( m_2 \),
+    \item \( G \) is the gravitational constant,
+    \item \( r \) is the distance between the masses.
+\end{itemize}
+
+Referencing equation relativity: \ref{eq:relativity}\\
+Referencing equation gravitation: \ref{eq:gravitation}
